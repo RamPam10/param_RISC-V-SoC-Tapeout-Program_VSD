@@ -8,10 +8,10 @@
 
 Make sure your system meets the following requirements before starting installation:
 
-- *💻 OS:* Ubuntu 20.04 or higher  
-- *🧠 RAM:* 6 GB or more  
-- *💾 Storage:* 50 GB HDD/SSD free space  
-- *⚙️ CPU:* 4 vCPUs  
+- **💻 OS:** Ubuntu 20.04 or higher  
+- **🧠 RAM:** 6 GB or more  
+- **💾 Storage:** 50 GB HDD/SSD free space  
+- **⚙️ CPU:** 4 vCPUs  
 
 ---
 
@@ -21,8 +21,8 @@ Make sure your system meets the following requirements before starting installat
 
 Yosys is used for synthesizing Verilog RTL designs.
 
-*Installation steps:*
-bash
+**Installation steps:**
+```bash
 sudo apt-get update
 git clone https://github.com/YosysHQ/yosys.git
 cd yosys
@@ -35,13 +35,13 @@ make config-gcc
 git submodule update --init --recursive
 make 
 sudo make install
+```
 
-
-*✔ Explanation:*
-- git clone → Downloads Yosys source code
-- apt-get install → Installs required dependencies
-- make → Compiles the source code
-- sudo make install → Installs Yosys globally
+**✔ Explanation:**
+- `git clone` → Downloads Yosys source code
+- `apt-get install` → Installs required dependencies
+- `make` → Compiles the source code
+- `sudo make install` → Installs Yosys globally
 
 ---
 
@@ -49,13 +49,13 @@ sudo make install
 
 Icarus Verilog is used for compiling and simulating Verilog HDL.
 
-*Installation steps:*
-bash
+**Installation steps:**
+```bash
 sudo apt-get update
 sudo apt-get install iverilog
+```
 
-
-*✔ Explanation:*
+**✔ Explanation:**
 - Installed directly from Ubuntu’s package manager.
 
 ---
@@ -64,13 +64,13 @@ sudo apt-get install iverilog
 
 GTKWave is used to visualize simulation waveforms (.vcd files).
 
-*Installation steps:*
-bash
+**Installation steps:**
+```bash
 sudo apt-get update
 sudo apt-get install gtkwave
+```
 
-
-*✔ Explanation:*
+**✔ Explanation:**
 - Simple one-command installation for waveform debugging.
 
 ---
@@ -79,14 +79,21 @@ sudo apt-get install gtkwave
 
 Run the following commands to confirm installations:
 
-bash
+```bash
 yosys
-iverilog -v
-gtkwave -v
+```
 
 ![Alt Text](Images/yosys.jpeg)
 
+```bash
+iverilog -v
+```
+
 ![Alt Text](Images/iverilog.jpeg)
+
+```bash
+gtkwave -v
+```
 
 ![Alt Text](Images/gtkwave.jpeg)
 
@@ -96,17 +103,17 @@ gtkwave -v
 
 ### 📊 Tools Summary
 
-- *Yosys* → RTL synthesis → yosys
-- *Icarus* → Verilog simulation → iverilog -v 
-- *GTKWave* → Waveform visualization → gtkwave -v
+- **Yosys** → RTL synthesis → `yosys`
+- **Icarus** → Verilog simulation → `iverilog -v` 
+- **GTKWave** → Waveform visualization → `gtkwave -v`
 ---
 
 ### 🎯 Summary
 
 By completing these steps, you will have:
 
-- *Yosys* → RTL synthesis
-- *Icarus Verilog (iverilog)* → HDL simulation
-- *GTKWave* → Waveform visualization
+- **Yosys** → RTL synthesis
+- **Icarus Verilog (iverilog)** → HDL simulation
+- **GTKWave** → Waveform visualization
 
 ✅ Ready to use for the RISC-V SoC Tapeout flow 🚀
